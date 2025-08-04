@@ -11,12 +11,20 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
+# Cloudflare
+.wrangler/
+dist-worker/
+worker/
+.env
+.dev.vars
+
 # Build output
 dist/
 build/
 .cache/
 tmp/
 public/
+.cloudflare/
 
 # System files
 .DS_Store
