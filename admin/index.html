@@ -1,11 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Panel de Administración - Cyvian</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel de Administración - Cyvian</title>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
 </body>
 </html>
+
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+media_folder: "img/uploads"
+public_folder: "/img/uploads"
+
+collections:
+  - name: "pages"
+    label: "Páginas"
+    files:
+      - name: "home"
+        label: "Página de Inicio"
+        file: "content/home.md"
+        fields:
+          - {label: "Título", name: "title", widget: "string"}
+          - {label: "Hero Imagen", name: "hero_image", widget: "image"}
+          - {label: "Contenido", name: "body", widget: "markdown"}
+  
+  - name: "servicios"
+    label: "Servicios"
+    folder: "content/servicios"
+    create: true
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Imagen", name: "image", widget: "image"}
+      - {label: "Descripción", name: "description", widget: "text"}
