@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://cyvianchile.com/</loc>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://cyvianchile.com/soluciones</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://cyvianchile.com/quienes-somos</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://cyvianchile.com/blog</loc>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://cyvianchile.com/herramientas</loc>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://cyvianchile.com/contacto</loc>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://cyvianchile.com/portal</loc>
+        <priority>0.9</priority>
+    </url>
+</urlset>

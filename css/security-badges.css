@@ -1,0 +1,449 @@
+/* ========================================
+   CYVIAN - Security Badges CSS
+   Estilos para badges y certificaciones
+   ======================================== */
+
+/* Badge container styles */
+.security-badges-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-lg);
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-md);
+    transition: all var(--transition-base);
+    cursor: pointer;
+}
+
+.compliance-badge:hover {
+    transform: scale(1.05);
+    border-color: var(--secondary-color);
+    box-shadow: 0 4px 20px rgba(0, 212, 255, 0.2);
+}
+
+.compliance-badge i {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.compliance-badge span {
+    font-size: 0.75rem;
+    color: var(--gray-400);
+    text-align: center;
+}
+
+/* Security rating display */
+.security-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-xl);
+    background: linear-gradient(135deg, var(--gray-900), var(--gray-800));
+    border-radius: 12px;
+    border: 2px solid var(--secondary-color);
+    text-align: center;
+}
+
+.rating-stars {
+    display: flex;
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-md);
+}
+
+.rating-stars i {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.rating-stars i.empty {
+    color: var(--gray-700);
+}
+
+.rating-score {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.rating-label {
+    font-size: 0.875rem;
+    color: var(--gray-400);
+}
+
+/* Live status indicator */
+.status-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--success-color);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 1);
+    animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+    0% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+    }
+}
+
+.status-text {
+    font-size: 0.875rem;
+    color: var(--gray-300);
+}
+
+/* Security features list */
+.security-features {
+    display: grid;
+    gap: var(--spacing-md);
+    margin: var(--spacing-xl) 0;
+}
+
+.security-feature {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    background: rgba(0, 212, 255, 0.05);
+    border-left: 3px solid var(--secondary-color);
+    border-radius: 0 4px 4px 0;
+    transition: all var(--transition-base);
+}
+
+.security-feature:hover {
+    background: rgba(0, 212, 255, 0.1);
+    transform: translateX(5px);
+}
+
+.security-feature i {
+    font-size: 1.25rem;
+    color: var(--secondary-color);
+    flex-shrink: 0;
+}
+
+.security-feature-text {
+    font-size: 0.9rem;
+    color: var(--gray-300);
+}
+
+/* Badge animations */
+.badge-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.badge-pulse {
+    animation: pulse-scale 2s ease-in-out infinite;
+}
+
+@keyframes pulse-scale {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .security-badges-container {
+        gap: var(--spacing-md);
+    }
+    
+    .cert-badge {
+        min-width: 100px;
+        padding: var(--spacing-md);
+    }
+    
+    .compliance-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .security-rating {
+        padding: var(--spacing-lg);
+    }
+    
+    .rating-stars i {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .security-badge {
+        font-size: 0.75rem;
+        padding: var(--spacing-xs) var(--spacing-md);
+    }
+    
+    .compliance-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .security-features {
+        gap: var(--spacing-sm);
+    }
+    
+    .security-feature {
+        padding: var(--spacing-sm);
+    }
+
+} /* Base badge styles */
+.security-badge {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: linear-gradient(135deg, var(--gray-900) 0%, var(--gray-800) 100%);
+    border: 1px solid var(--gray-700);
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all var(--transition-base);
+    overflow: hidden;
+}
+
+.security-badge::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, var(--secondary-color) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+    transform: rotate(45deg);
+}
+
+.security-badge:hover::before {
+    opacity: 0.1;
+}
+
+.security-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 212, 255, 0.2);
+    border-color: var(--secondary-color);
+}
+
+/* Icon badges */
+.icon-badge {
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gray-900) 0%, var(--gray-800) 100%);
+    border: 2px solid var(--gray-700);
+}
+
+.icon-badge i {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.icon-badge:hover {
+    border-color: var(--secondary-color);
+    background: linear-gradient(135deg, var(--gray-800) 0%, var(--gray-700) 100%);
+}
+
+/* Certification badges */
+.cert-badge {
+    flex-direction: column;
+    padding: var(--spacing-lg);
+    min-width: 120px;
+    text-align: center;
+}
+
+.cert-badge-icon {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.cert-badge-text {
+    font-size: 0.75rem;
+    color: var(--gray-300);
+}
+
+/* SSL Badge special style */
+.ssl-secure-badge {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    border-color: #059669;
+    color: var(--white);
+}
+
+.ssl-secure-badge i {
+    margin-right: var(--spacing-xs);
+}
+
+/* Uptime badge */
+.uptime-badge-display {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: linear-gradient(135deg, var(--gray-900), var(--gray-800));
+    border: 1px solid var(--secondary-color);
+    border-radius: 50px;
+}
+
+.uptime-percentage {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.uptime-label {
+    font-size: 0.75rem;
+    color: var(--gray-400);
+    text-transform: uppercase;
+}
+
+/* Score badge */
+.score-badge {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+
+.score-circle {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.score-background {
+    fill: none;
+    stroke: var(--gray-700);
+    stroke-width: 8;
+}
+
+.score-progress {
+    fill: none;
+    stroke: var(--secondary-color);
+    stroke-width: 8;
+    stroke-linecap: round;
+    stroke-dasharray: 251.2;
+    stroke-dashoffset: 25.12; /* 90% score */
+    transition: stroke-dashoffset 1s ease;
+}
+
+.score-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+/* Animated security scan badge */
+.scan-badge {
+    position: relative;
+    padding: var(--spacing-md) var(--spacing-xl);
+    background: var(--gray-900);
+    border: 1px solid var(--secondary-color);
+    overflow: hidden;
+}
+
+.scan-badge::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(0, 212, 255, 0.4), 
+        transparent);
+    animation: scan-sweep 3s infinite;
+}
+
+@keyframes scan-sweep {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* Trust indicators */
+.trust-indicator {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+    background: rgba(0, 212, 255, 0.05);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 8px;
+    transition: all var(--transition-base);
+}
+
+.trust-indicator:hover {
+    background: rgba(0, 212, 255, 0.1);
+    border-color: var(--secondary-color);
+}
+
+.trust-icon {
+    font-size: 2rem;
+    color: var(--secondary-color);
+}
+
+.trust-content h4 {
+    font-size: 1rem;
+    color: var(--white);
+    margin-bottom: var(--spacing-xs);
+}
+
+.trust-content p {
+    font-size: 0.875rem;
+    color: var(--gray-400);
+    margin: 0;
+}
+
+/* Compliance badges grid */
+.compliance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: var(--spacing-md);
+    margin: var(--spacing-xl) 0;
+}
+
+.compliance-badge {
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--gray-900);
+    border: 1px solid var(--gray-800);
+    border-radius: 8px;
+    padding: var(--spacing-md);
+}
