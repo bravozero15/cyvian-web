@@ -59,7 +59,7 @@
   force = true
 
 [build.environment]
-  NODE_VERSION = "16"
+  NODE_VERSION = "18"
   SITE_URL = "https://cyvianchile.com"
   CLOUDFLARE_ZONE_ID = "edef019782b9906e16525f225d956f5b"
 
@@ -68,5 +68,4 @@
 
 [plugins.inputs]
   zoneName = "cyvianchile.com"
-  apiToken = "${CLOUDFLARE_API_TOKEN}"
-  zoneId = "${CLOUDFLARE_ZONE_ID}"
+  zoneId = "edef019782b9906e16525f225d956f5b"
