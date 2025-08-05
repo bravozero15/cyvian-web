@@ -2,6 +2,11 @@
   publish = "/"
   command = ""
 
+[build.environment]
+  NODE_VERSION = "18"
+  SITE_URL = "https://cyvianchile.com"
+  CLOUDFLARE_ZONE_ID = "edef019782b9906e16525f225d956f5b"
+
 # Configuración de caché
 [[headers]]
   for = "/*"
@@ -57,11 +62,6 @@
   to = "https://cyvianchile.com/:splat"
   status = 301
   force = true
-
-[build.environment]
-  NODE_VERSION = "18"
-  SITE_URL = "https://cyvianchile.com"
-  CLOUDFLARE_ZONE_ID = "edef019782b9906e16525f225d956f5b"
 
 [[plugins]]
   package = "@netlify/plugin-cloudflare"
