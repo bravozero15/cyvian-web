@@ -1,71 +1,17 @@
 [build]
-  publish = "/"
-  command = ""
+  publish = "."
 
-[build.environment]
-  NODE_VERSION = "18"
-  SITE_URL = "https://cyvianchile.com"
-  CLOUDFLARE_ZONE_ID = "edef019782b9906e16525f225d956f5b"
-
-# Configuración de caché
 [[headers]]
   for = "/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000"
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.netlify.app *.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https:; frame-ancestors 'none'; upgrade-insecure-requests;"
 
-# Cache específico para assets estáticos
-[[headers]]
-  for = "/*.css"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/*.js"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/*.jpg"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/*.png"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[redirects]]
-  from = "http://*" 
-  to = "https://:splat"
-  status = 301
-  force = true
-
+# Redirección para SPA (opcional)
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-
-[[redirects]]
-  from = "https://cyvian.cl/*"
-  to = "https://cyvianchile.com/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "http://cyvian.cl/*"
-  to = "https://cyvianchile.com/:splat"
-  status = 301
-  force = true
-
-[[plugins]]
-  package = "@netlify/plugin-cloudflare"
-
-[plugins.inputs]
-  zoneName = "cyvianchile.com"
-  zoneId = "edef019782b9906e16525f225d956f5b"
