@@ -1,0 +1,9 @@
+{
+  "name": "cyvian-website",
+  "version": "1.0.0",
+  "description": "Cyvian - Ciberseguridad Adaptativa",
+  "private": true,
+  "scripts": {
+    "build": "echo 'No build needed for static site'"
+  }
+}
