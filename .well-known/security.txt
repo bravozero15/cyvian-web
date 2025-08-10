@@ -1,0 +1,6 @@
+Contact: mailto:contacto@cyvianchile.com
+Contact: tel:+569xxxxx
+Policy: https://www.cyvianchile.com/politica-de-privacidad
+Preferred-Languages: es, en
+Encryption: https://www.cyvianchile.com/pgp-key.txt
+Acknowledgements: https://www.cyvianchile.com/gracias
