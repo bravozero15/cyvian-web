@@ -1,0 +1,11 @@
+{
+  "items": [
+    { "label": "Inicio", "href": "/" },
+    { "label": "Soluciones", "href": "/services.html" },
+    { "label": "Quiénes somos", "href": "/nosotros.html" },
+    { "label": "Blog", "href": "/blog/index.html" },
+    { "label": "Herramientas", "href": "/tools/index.html" },
+    { "label": "Contacto", "href": "/contacto.html" }
+  ]
+}
+

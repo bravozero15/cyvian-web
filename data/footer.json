@@ -1,0 +1,30 @@
+{
+  "about": {
+    "title": "Cyvian",
+    "text": "Líderes en ciberseguridad adaptativa para empresas que buscan protección real."
+  },
+  "links": {
+    "servicios": [
+      { "label": "SOC as a Service", "href": "/pages/servicios.html#soc" },
+      { "label": "Pentesting", "href": "/pages/servicios.html#pentesting" },
+      { "label": "Consultoría", "href": "/pages/servicios.html#consultoria" },
+      { "label": "Respuesta a Incidentes", "href": "/pages/servicios.html#incidentes" }
+    ],
+    "recursos": [
+      { "label": "Blog", "href": "/pages/blog.html" },
+      { "label": "Scanner Gratuito", "href": "/tools/header-scanner.html" },
+      { "label": "Whitepapers", "href": "#" },
+      { "label": "Webinars", "href": "#" }
+    ]
+  },
+  "contacto": {
+    "email": "contacto@cyvian.cl",
+    "telefono": "+56 9 XXXX XXXX",
+    "ubicacion": "Santiago, Chile"
+  },
+  "social": [
+    { "name": "LinkedIn", "href": "#", "icon": "fab fa-linkedin" },
+    { "name": "Twitter", "href": "#", "icon": "fab fa-twitter" },
+    { "name": "GitHub", "href": "#", "icon": "fab fa-github" }
+  ]
+}

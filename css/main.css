@@ -885,3 +885,8 @@ a:hover {
     color: var(--secondary-color);
     margin-bottom: var(--spacing-md);
 }
+.eslogan {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #E53935; /* color rojo CYVIAN */
+}

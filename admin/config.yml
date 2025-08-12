@@ -1,38 +1,23 @@
 backend:
   name: git-gateway
   branch: main
-  commit_messages:
-    create: 'Create {{collection}} "{{slug}}"'
-    update: 'Update {{collection}} "{{slug}}"'
-    delete: 'Delete {{collection}} "{{slug}}"'
-    uploadMedia: '[skip ci] Upload "{{path}}"'
-    deleteMedia: '[skip ci] Delete "{{path}}"'
 
-local_backend: true
-media_folder: "img/uploads"
-public_folder: "/img/uploads"
+media_folder: "static/uploads"
+public_folder: "/static/uploads"
 publish_mode: editorial_workflow
-
-# Show preview links
-show_preview_links: true
+locale: "es"
 
 collections:
-  - name: "pages"
-    label: "Páginas"
+  - name: "ajustes"
+    label: "Ajustes del sitio"
     files:
-      - name: "home"
-        label: "Página de Inicio"
-        file: "content/home.md"
+      - file: "data/navigation.json"
+        label: "Navegación principal"
+        name: "navigation"
         fields:
-          - {label: "Título", name: "title", widget: "string"}
-          - {label: "Hero Imagen", name: "hero_image", widget: "image"}
-          - {label: "Contenido", name: "body", widget: "markdown"}
-  
-  - name: "servicios"
-    label: "Servicios"
-    folder: "content/servicios"
-    create: true
-    fields:
-      - {label: "Título", name: "title", widget: "string"}
-      - {label: "Imagen", name: "image", widget: "image"}
-      - {label: "Descripción", name: "description", widget: "text"}
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Etiqueta", name: "label", widget: "string" }
+              - { label: "URL", name: "href", widget: "string" }

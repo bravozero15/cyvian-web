@@ -1,0 +1,52 @@
+{
+  "services": [
+    {
+      "id": "soc",
+      "title": "SOC as a Service",
+      "description": "Centro de operaciones de seguridad 24/7 con analistas certificados monitoreando tu infraestructura.",
+      "icon": "fas fa-shield-alt",
+      "features": [
+        "Monitoreo continuo",
+        "Respuesta a incidentes",
+        "Threat hunting proactivo"
+      ],
+      "link": "/pages/servicios.html#soc"
+    },
+    {
+      "id": "pentesting",
+      "title": "Pentesting & Auditorías",
+      "description": "Evaluaciones de seguridad exhaustivas para identificar vulnerabilidades antes que los atacantes.",
+      "icon": "fas fa-bug",
+      "features": [
+        "OWASP Top 10",
+        "Red Team exercises",
+        "Informes ejecutivos"
+      ],
+      "link": "/pages/servicios.html#pentesting"
+    },
+    {
+      "id": "consultoria",
+      "title": "Consultoría Estratégica",
+      "description": "Diseñamos tu estrategia de ciberseguridad alineada con objetivos de negocio y compliance.",
+      "icon": "fas fa-user-shield",
+      "features": [
+        "ISO 27001/27002",
+        "NIST Framework",
+        "Planes de continuidad"
+      ],
+      "link": "/pages/servicios.html#consultoria"
+    },
+    {
+      "id": "incidentes",
+      "title": "Respuesta a Incidentes",
+      "description": "Equipo de respuesta rápida disponible 24/7 para contener y remediar brechas de seguridad.",
+      "icon": "fas fa-ambulance",
+      "features": [
+        "Respuesta < 15 min",
+        "Forensia digital",
+        "Recuperación garantizada"
+      ],
+      "link": "/pages/servicios.html#incidentes"
+    }
+  ]
+}
